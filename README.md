@@ -4,6 +4,8 @@ shared_context for rake tasks.
 
 This gem is inspired by [this post](http://robots.thoughtbot.com/post/11957424161/test-rake-tasks-like-a-boss).
 
+This gem support **Padrino** project
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -26,7 +28,7 @@ If you have `rake reports:users` like following.
 # lib/tasks/reports.rake
 namespace :reports do
   desc "Generate report"
-  
+
   task :generate => :environment do
     ReportGenerator.generate
   end
