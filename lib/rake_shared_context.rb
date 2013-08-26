@@ -12,9 +12,9 @@ begin
       loaded_files = []
       Rake.application = rake
       Dir::glob("lib/tasks/*.rake").each do |task|
-        Rake.application.rake_require(task.sub(/.rake$/,''), [Rails.root.to_s], loaded_files)
+        Rake.application.rake_require(task.sub(/.rake$/,''), [Padrino.root.to_s], loaded_files)
       end
-       
+
       Rake::Task.define_task(:environment)
     end
   end
